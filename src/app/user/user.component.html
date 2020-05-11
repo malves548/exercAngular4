@@ -1,0 +1,37 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>UserName</th>
+      <th>E-mail</th>
+      <th>Endereço</th>
+      <th>Telefone</th>
+      <th>WebSite</th>
+      <th>Compania</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let usuario of users">
+    <tr>
+      <td>{{usuario.id}}</td>
+      <td>{{usuario.name}}</td>
+      <td>{{usuario.username}}</td>
+      <td>{{usuario.email}}</td>
+      <td>
+        Rua: {{usuario.address.street}}
+        Suite: {{usuario.address.suite}}
+        Cidade: {{usuario.address.city}}
+        CEP: {{usuario.address.zipcode}}
+        Latitude: {{usuario.address.geo?.lat}}
+        Longitude: {{usuario.address.geo?.lng}}
+      </td>
+      <td>{{usuario.phone}}</td>
+      <td>{{usuario.website}}</td>
+      <td>
+        {{usuario.company.name}}
+        {{usuario.company.catchPhrase}}
+        {{usuario.company.bs}}
+      </td>
+    </tr>
+  </tbody>
+</table>

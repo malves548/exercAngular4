@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="grid">
+    <div class="card" *ngFor="let comment of comments" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{comment.name}}
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p class="card-text">
+          {{comment.body}}
+        </p>
+        <label>{{comment.email}}</label>
+      </div>
+    </div>
+  </div>
+</div>
